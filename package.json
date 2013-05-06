@@ -1,0 +1,25 @@
+{
+  "name": "npm-panic",
+  "version": "0.0.1",
+  "description": "Generates a CSV table for Panic's Status Board app",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nathanbowser/node-npm-panic"
+  },
+  "keywords": [
+    "npm",
+    "npm-stats",
+    "dashboard"
+  ],
+  "author": "Nathan Bowser <nbowser@gmail.com>",
+  "license": "BSD",
+  "dependencies": {
+    "request": "~2.21.0",
+    "json2csv-stream": "~0.1.2",
+    "transfuse": "0.0.3"
+  }
+}
