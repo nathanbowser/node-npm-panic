@@ -19,7 +19,7 @@ function recents () {
     map({
       title: doc[1],
       updated: moment(doc[0]).fromNow(),
-      description: doc[2]
+      description: doc[2].replace(/,/g, '')
     })
   }))
 }
