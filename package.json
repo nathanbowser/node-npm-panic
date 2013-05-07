@@ -1,10 +1,11 @@
 {
   "name": "npm-panic",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generates a CSV table for Panic's Status Board app",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,9 @@
     "json2csv-stream": "~0.1.2",
     "transfuse": "0.0.3",
     "moment": "~2.0.0"
+  },
+  "subdomain": "npm-panic",
+  "engines": {
+    "node": "0.8.x"
   }
 }
