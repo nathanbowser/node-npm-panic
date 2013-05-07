@@ -57,5 +57,4 @@ http.createServer(function (req, res) {
     res.writeHead(400)
     res.end()
   }
-}).listen(1337, 'dash-dev.com')
-
+}).listen(process.env.PORT || 3000, process.env.HOST || 'localhost')
