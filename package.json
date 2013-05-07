@@ -1,6 +1,6 @@
 {
   "name": "npm-panic",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Generates a CSV table for Panic's Status Board app",
   "main": "index.js",
   "scripts": {
