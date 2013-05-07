@@ -25,3 +25,6 @@ The numbers of downloads for a module (used for panic charts)
 ```
   curl localhost:1337/downloads.csv?module=request
 ```
+
+
+See more here: https://github.com/nathanbowser/node-npm-panic
