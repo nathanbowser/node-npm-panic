@@ -4,6 +4,7 @@ var request = require('request')
   , Json2Csv = require('json2csv-stream')
   , moment = require('moment')
   , url = require('url')
+  , fs = require('fs')
 
 function recents () {
   return request({
@@ -54,7 +55,6 @@ http.createServer(function (req, res) {
     var parser = new Json2Csv
     downloads(_url.query.module).pipe(parser).pipe(res)
   } else {
-    res.writeHead(400)
-    res.end()
+    fs.createReadStream('./readme.md').pipe(res)
   }
 }).listen(process.env.PORT || 3000, process.env.HOST || 'localhost')
