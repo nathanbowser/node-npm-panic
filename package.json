@@ -20,6 +20,7 @@
   "dependencies": {
     "request": "~2.21.0",
     "json2csv-stream": "~0.1.2",
-    "transfuse": "0.0.3"
+    "transfuse": "0.0.3",
+    "moment": "~2.0.0"
   }
 }
