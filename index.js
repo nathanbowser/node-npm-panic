@@ -1,13 +1,20 @@
 var request = require('request')
   , transfuse = require('transfuse')
-  , recentUrl = 'http://isaacs.couchone.com/registry/_design/app/_view/browseUpdated?descending=true&limit=10&skip=0&group_level=3'
   , http = require('http')
   , Json2Csv = require('json2csv-stream')
   , moment = require('moment')
   , url = require('url')
 
 function recents () {
-  return request(recentUrl).pipe(transfuse(['rows', /./, 'key'], function (doc, map) {
+  return request({
+    url: 'http://isaacs.couchone.com/registry/_design/app/_view/browseUpdated',
+    qs: {
+      descending: true,
+      limit: 10,
+      skip: 0,
+      group_level: 3
+    }
+  }).pipe(transfuse(['rows', /./, 'key'], function (doc, map) {
     map({
       title: doc[1],
       updated: moment(doc[0]).fromNow(),
